@@ -1,24 +1,30 @@
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Harrison Rigby</title>
     <link rel="stylesheet" href="NewStyleSheet.css">
     <script src="Script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-<div class="topnav">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<nav class="topnav">
     <a class="Title" href="Main.html">H|R</a>
     <a class="active" href="Main.html">Home</a>
-    <a href="About.html">News</a>
+    <a href="News.html">News</a>
     <div class="dropdown">
         <a class="dropbtn">Projects
             <i class="fa fa-caret-down"></i>
         </a>
-        <div class="dropdown-content">
-            <a href="Projects.html"> coding work </a>
-            <a href="">Project 2</a>
-        </div>
+        <ul class="dropdown-content">
+            <li><a href="Projects.html"> coding work </a></li>
+            <li><hr class="dropdown-divider" </li>
+            <li><a href="">Project 2</a></li>
+        </ul>
     </div>
     <a href="#contact">Contact</a>
     <a href="Harrison%20Rigby%20CV%20pdf%20copy.pdf">CV</a>
@@ -37,33 +43,47 @@
         </div>
         </label>
     </a>
-</div>
+</nav>
 
     <div style="padding-left:16px; padding-top: 50px;">
         <h2 id = "title text">Harrison Rigby</h2>
         <p class="bodytext" style="display: none">Some content..</p>
     </div>
-    <button type="button"  id="button" onclick="showNoah()">hi im a button</button>
-        <p id = "noahImage" style="display: none">
-            <img id = "myImg" src="https://cdn.discordapp.com/attachments/602191892423376929/1081344367148675083/me.png" alt = "some bums" >
-        </p>
 
-
-    <div class = "fixed-button">
-        <button type="button"  class = "fixed-button" id= "myBtn" >Return to Top</button>
-    </div>
 
 <main>
+    <div class="aboutMeLayout">
+        <img src="HPIC.jpeg" id =  "HarrisonAboutMePic" alt="A picture of a very sexy man :)"></img>
+        <br>
+        <p class="bodytext">
+            About me:
+            <br>
+            <br>
+            I am a student at the University of Manchester studying Computer Science, I am currently in my first year of study!</p>
+        <br>
+        <br>
 
+    </div>
+
+    <button type="button"  id="button" onclick="showNoah()">hi im a button</button>
+    <p id = "noahImage" style="display: none">
+        <img id = "myImg" src="https://cdn.discordapp.com/attachments/602191892423376929/1081344367148675083/me.png" alt = "some bums" >
+    </p>
+
+
+    <div class = "fixed-button"  onclick="scrollToTop()">
+        Return to Top
+    </div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
 </main>
 
 
 <footer>
-
-<a href="http://twitter.com"> <img src="download.png" class="image"></a>
-    <a href="http://facebook.com"> <img src="FacebookImg.png" class="image"></a>
-    <a href="http://instagram.com"> <img src="InstagramImg.jpeg" class="image"></a>
+<div class="socialImageDiv">
+<a href="http://twitter.com"> <img src="Logo_of_Twitter.svg.png" class="socialImage"></a>
+    <a href="http://facebook.com"> <img src="2021_Facebook_icon.svg.webp" class="socialImage"></a>
+    <a href="http://instagram.com"> <img src="Instagram_logo_2022.svg.webp" class="socialImage"></a>
+</div>
 
 </footer>
 

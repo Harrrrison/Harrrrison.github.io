@@ -8,6 +8,13 @@ function showGitCode() {
         document.getElementById("gitCode1").style.display="none"
     }
 }
+
+function hideGitCode() {
+    if (document.getElementById("gitCode1").style.display=="block"){
+        document.getElementById("gitCode1").style.display="none"
+    }
+}
+
 let homeBodyText = document.getElementById("maintext")
 let homeButtonClick = document.getElementById("button")
 
@@ -29,9 +36,9 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
+        myBtn.style.display = "block";
     } else {
-        mybutton.style.display = "none";
+        myBtn.style.display = "none";
     }
 }
 
@@ -102,3 +109,10 @@ window.addEventListener('scroll', function() {
         footer.style.bottom = 'auto';
     }
 });
+
+function scrollToTop() {
+    window.scrollTo({top: 0,
+        behavior: 'smooth'
+    });
+
+}
