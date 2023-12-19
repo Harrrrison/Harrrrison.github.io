@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harrison Rigby</title>
+    <link rel="stylesheet" href="NewStyleSheet.css">
+    <script src="Script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="topnav" style="top: 0;
+      left: 0; position: fixed;">
+    <a class="Title" href="Main.html">H|R</a>
+    <a  href="Main.html">Home</a>
+    <a href="About.html">News</a>
+    <div class="dropdown" >
+        <a class="dropbtn" ><a class="active">Projects
+            <i class="fa fa-caret-down"></i>
+            </a>
+        </a>
+        <div class="dropdown-content">
+            <a href="Projects.html"> coding work </a>
+            <a href="">Project 2</a>
+        </div>
+    </div>
+    <a href="#contact">Contact</a>
+    <a href="Harrison%20Rigby%20CV%20pdf%20copy.pdf">CV</a>
+
+    <a id = "DarkModeToggle" onclick="toggleDarkMode()">
+        <label>
+            <input class="toggle-checkbox" type="checkbox" onclick="toggleDarkMode()">
+            <div class="toggle-slot">
+                <div class="sun-icon-wrapper">
+                    <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                </div>
+                <div class="toggle-button"></div>
+                <div class="moon-icon-wrapper">
+                    <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+                </div>
+            </div>
+        </label>
+    </a>
+</div>
+<p class = "bodytext">My first major project that I placed on github was a system monitoring software that allowed a user to monitor the performance of their PC,
+    the aim of the project was to try and make it easier for a user to understand problems in their system and encourage novices to build
+    and maintain their own system. The link to the repository can be found
+<a href="https://github.com/Harrrrison/Alevel2020Coursework" id = "link">here.</a>
+<button type="button" onclick="showGitCode()" id="button1">Code</button>
+</p>
+<p id="gitCode1" style="display: none">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FHarrrrison%2FAlevel2020Coursework%2Fblob%2Fmain%2FScripts%2Fmain.py&style=night-owl&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</p>
+</body>
+</html>

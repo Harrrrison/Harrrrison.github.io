@@ -1,0 +1,332 @@
+body {
+    font-family: Tahoma, sans-serif;
+    background: #E0EEEEBE;
+    margin: 0;
+    padding: 0;
+}
+
+.dark-mode {
+    background: #1e1e28;
+    color: #96baba;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    background-color: #212150;
+    margin-bottom: 10px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    transition: top 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Title {
+    color: coral;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.toggle-slot {
+    font-size: 10px;
+    position: relative;
+    height: 3.5em;
+    width: 7em;
+    border: 0px solid transparent;
+    border-radius: 10em;
+    background-color: white;
+    transition: background-color 250ms;
+    top: 0;
+    right: 0;
+    position: absolute; /* Set the position to absolute */
+    top: 0; /* Align to the top of the container */
+    right: 0; /* Align to the far right of the container */
+    margin: 10px; /* Optional: Add margin for spacing */
+}
+
+.toggle-checkbox:checked ~ .toggle-slot {
+    background-color: #374151;
+}
+
+.toggle-button {
+    transform: translate(0.3em, 0.25em);
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    background-color: #ffeccf;
+    box-shadow: inset 0px 0px 0px 0.75em #ffbb52;
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+    background-color: #485367;
+    box-shadow: inset 0px 0px 0px 0.75em white;
+    transform: translate(3.65em, 0.25em);
+}
+
+.sun-icon {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    color: #ffbb52;
+}
+
+.sun-icon-wrapper {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    opacity: 1;
+    transform: translate(2em, 2em) rotate(15deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+    opacity: 0;
+    transform: translate(3em, 2em) rotate(0deg);
+}
+
+.moon-icon {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    color: white;
+}
+
+.moon-icon-wrapper {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    opacity: 0;
+    transform: translate(11em, 2em) rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+    opacity: 1;
+    transform: translate(2em, 2em) rotate(-15deg);
+}
+
+.topnav.hidden {
+    top: -50px;
+}
+
+#noahImage{
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#noahImage:hover{
+    transform: scaleX(-1);
+    opacity: 0.7;
+}
+
+/* Style the links in the navigation bar */
+.topnav a {
+    color: coral;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: inline-block;
+    list-style-type: none;
+    margin: 0px;
+    border-radius: 1em;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 1em;
+}
+
+
+/* Change the color of the active link */
+.topnav a.active {
+    background-color: coral;
+    color: black;
+}
+/* Style the page title */
+#title {
+    color: #333;
+    font-size: 48px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+/* Style the main text */
+.bodytext {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 100px;
+}
+
+/* Style the button */
+#button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 50px;
+}
+
+#button1 {
+    background-color: #1e1e28;
+    border: #333333;
+    color: coral;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: #333333;
+    display: block;
+    font-size: 16px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 50px;
+}
+
+/* Style the "top" button */
+#myBtn {
+    display: none; /* Hide the button by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #4CAF50; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+/* Show the "top" button when you scroll down 20px from the top of the page */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Dropdown button */
+.dropbtn {
+    background-color: #212150;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: auto;
+    position: relative;
+    z-index: 1000;
+    transition: top 0.3s;
+    box-sizing: border-box;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+    display: block;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    box-sizing: border-box;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    background-color: #212150;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+
+
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: inherit;
+    color: coral;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.fixed-button {
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
+    right: 20px; /* Adjust the distance from the right as needed */
+    padding: 10px 20px;
+    background-color: #212150;
+    color: #ffffff;
+    text-decoration: #3e8e41;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for better user experience */
+}
+
+/* Button styling on hover */
+.fixed-button:hover {
+    background-color: coral;
+}
+
+footer{
+    background-color: #3b3b62;
+    color: coral;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
