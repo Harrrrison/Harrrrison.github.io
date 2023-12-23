@@ -116,3 +116,13 @@ function scrollToTop() {
     });
 
 }
+
+function BEARTIME() {
+    const events = [
+        'bear-mode1',
+        'bear-mode2',
+        'bear-mode3'];
+    var element = document.body;
+    element.classList.toggle(events[Math.floor(Math.random() * events.length)]);
+    console.log("Bear mode toggled");
+}
