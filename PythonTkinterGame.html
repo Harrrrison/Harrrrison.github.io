@@ -13,18 +13,18 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-<nav class="topnav" style=" top: 0; left: 0;">
+<nav class="topnav">
     <a class="Title" href="index.html">H|R</a>
     <a href="index.html">Home</a>
     <a href="News.html">News</a>
-    <div class="dropdown active" >
+    <div class="dropdown">
         <a class="dropbtn active">Projects
             <i class="fa fa-caret-down"></i>
         </a>
         <ul class="dropdown-content">
-            <li><a href="Projects-main.html" class="active"> coding work </a></li>
+            <li><a href="Projects-main.html"> coding work </a></li>
             <li><hr class="dropdown-divider" ></li>
-            <li><a href="PythonTkinterGame.html">Tkinter game</a></li>
+            <li><a href="PythonTkinterGame.html"  class="active">Tkinter game</a></li>
         </ul>
     </div>
     <a href="#contact">Contact</a>
@@ -45,21 +45,29 @@
         </label>
     </a>
 </nav>
+<!-- <py-script src="./main.py"></py-script> -->
 
-<p class="ProjectsHeader">Projects:</p>
-<main class="projectsMainContent">
+<div style="padding: 1vw;" >
+    <p class="projectsHeader" style="font-size: 20px; text-align: center"> The VM is very laggy, so give it some time if not refresh or got to the link <a href="https://replit.com/@TheSwellbear/TkinterGameHostl">here</a> </p>
 
-    <p class = "bodytext">My first major project that I placed on github was a system monitoring software that allowed a user to monitor the performance of their PC,
-        the aim of the project was to try and make it easier for a user to understand problems in their system and encourage novices to build
-        and maintain their own system. The link to the repository can be found
-        <a href="https://github.com/Harrrrison/Alevel2020Coursework" id = "link">here.</a>
-        <button type="button" onclick="showGitCode()" class="button1">Code</button>
-    </p>
-    <p id="gitCode1" style="display: none">
-        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FHarrrrison%2FAlevel2020Coursework%2Fblob%2Fmain%2FScripts%2Fmain.py&style=night-owl&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-        <button type="button" onclick="hideGitCode()" class="button1">Hide</button>
-    </p>
+    <div class = "fixed-button"  onclick="scrollToTop()">
+        Return to Top
+    </div>
+    <div class="TkinterGameWindow">
+        <iframe src="https://replit.com/@TheSwellbear/TkinterGameHost?embed=true" width="1080" height="720" />
 
-</main>
+    </div>
+</div>
+<footer>
+    <div class="socialImageDiv">
+        <a href="http://twitter.com"> <img src="Logo_of_Twitter.svg.png" class="socialImage"></a>
+        <a href="http://facebook.com"> <img src="2021_Facebook_icon.svg.webp" class="socialImage"></a>
+        <a href="http://instagram.com"> <img src="Instagram_logo_2022.svg.webp" class="socialImage"></a>
+    </div>
+
+</footer>
+
+
+
 </body>
 </html>

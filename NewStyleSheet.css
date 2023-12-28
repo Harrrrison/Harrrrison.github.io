@@ -497,4 +497,12 @@ footer {
     margin-bottom: 600px;
 }
 
+.TkinterGameWindow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw ;
+    margin: 0 auto;
+
+}
 

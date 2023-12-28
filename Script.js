@@ -126,3 +126,6 @@ function BEARTIME() {
     element.classList.toggle(events[Math.floor(Math.random() * events.length)]);
     console.log("Bear mode toggled");
 }
+
+// find out if the user is on a mobile device
+let isMobile = window.matchMedia("only screen and (max-width: 600px)").matches;
