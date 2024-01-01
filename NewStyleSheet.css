@@ -440,14 +440,14 @@ footer {
 
 .projectsMainContent{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr;
     max-width: 800px;
     margin: 0 auto;
     align-items: normal;
     padding: 1vw;
     gap: 2vw;
     justify-content: left; /* Center content horizontally */
-    max-height: 500px;
+    max-height: 5000px;
     overflow: hidden;
 
 }
@@ -504,5 +504,118 @@ footer {
     padding: 1vw ;
     margin: 0 auto;
 
+}
+
+.githugProfileBlock{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw ;
+    margin: 0 auto;
+    max-width: 800px;
+    color: coral;
+}
+
+.githubInfo{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw ;
+    margin: 0 auto;
+    max-width: 800px;
+
+}
+
+/** entire container, keeps perspective */
+.flip-container {
+    perspective: 1000px;
+    display: grid;
+    padding: 1vw ;
+    margin: 0 auto;
+    max-width: 800px;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr ;
+    justify-content: center;
+    text-align: center;
+    text-decoration: #1d1919;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 220px;
+    height: 340px;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    /* card styling */
+    background-color: deepskyblue;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+    word-wrap: break-word;
+}
+
+#repositories{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: normal;
+    padding: 1vw;
+    gap: 2vw;
+    justify-content: left; /* Center content horizontally */
+    max-height: 5000px;
+}
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+}
+
+#profile{
+    justify-content: center;
+    text-align: center;
+}
+
+#repoHeader{
+    font-size: 48px;
+    text-align: left;
+    text-decoration: #1d1919;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-top: 60px; /* Set a margin-top to ensure the paragraph is below the nav bar */
 }
 

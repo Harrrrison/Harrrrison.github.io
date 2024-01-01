@@ -1,4 +1,5 @@
 console.log("Script loaded!");
+var darkmode = false;
 
 function showGitCode() {
     if (document.getElementById("gitCode1").style.display=="none"){
@@ -86,12 +87,21 @@ for (var i = 0; i < dropdownBtn.length; i++) {
         }
     });
 }
-
+// work out how to hold the dark mode
 function toggleDarkMode() {
     var element = document.body;
-    element.classList.toggle("dark-mode");
+    element.classList.toggle("dark-mode")
     console.log("Dark mode toggled");
+    if (darkmode == false){
+        darkmode = true;
+        element.classList.add("dark-mode");}
+    else{
+        darkmode = false;
+        element.classList.remove("dark-mode");
+    }
 }
+
+
 
 window.addEventListener('scroll', function() {
     var footer = document.querySelector('footer');

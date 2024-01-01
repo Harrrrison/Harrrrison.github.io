@@ -6,6 +6,7 @@
     <title>Harrison Rigby</title>
     <link rel="stylesheet" href="NewStyleSheet.css">
     <script src="Script.js"></script>
+    <script src="githubToken.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
@@ -48,17 +49,26 @@
 
 <p class="ProjectsHeader">Projects:</p>
 <main class="projectsMainContent">
+    <div class="projectsOverVeiw">
+        <p class = "bodytext">My first major project that I placed on github was a system monitoring software that allowed a user to monitor the performance of their PC,
+            the aim of the project was to try and make it easier for a user to understand problems in their system and encourage novices to build
+            and maintain their own system. The link to the repository can be found
+            <a href="https://github.com/Harrrrison/Alevel2020Coursework" id = "link">here.</a>
+            <button type="button" onclick="showGitCode()" class="button1">Code</button>
+        </p>
+        <p id="gitCode1" style="display: none">
+            <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FHarrrrison%2FAlevel2020Coursework%2Fblob%2Fmain%2FScripts%2Fmain.py&style=night-owl&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+            <button type="button" onclick="hideGitCode()" class="button1">Hide</button>
+        </p>
 
-    <p class = "bodytext">My first major project that I placed on github was a system monitoring software that allowed a user to monitor the performance of their PC,
-        the aim of the project was to try and make it easier for a user to understand problems in their system and encourage novices to build
-        and maintain their own system. The link to the repository can be found
-        <a href="https://github.com/Harrrrison/Alevel2020Coursework" id = "link">here.</a>
-        <button type="button" onclick="showGitCode()" class="button1">Code</button>
-    </p>
-    <p id="gitCode1" style="display: none">
-        <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FHarrrrison%2FAlevel2020Coursework%2Fblob%2Fmain%2FScripts%2Fmain.py&style=night-owl&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-        <button type="button" onclick="hideGitCode()" class="button1">Hide</button>
-    </p>
+    </div>
+    <div class="githubInfo">
+        <section id="profile"></section>
+        <p id="repoHeader">Repositories:</p>
+            <section id="repositories"></section>
+
+    </div>
+
 
 </main>
 </body>
