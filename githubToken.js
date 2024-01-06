@@ -1,4 +1,4 @@
-const accessToken = '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';
+const accessToken = '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';
 const username = 'harrrrison';
 
 // Fetch GitHub profile data
@@ -13,7 +13,7 @@ fetch(`https://api.github.com/users/${username}`, {
         const profileSection = document.getElementById('profile');
         profileSection.innerHTML = `
         <div class="githugProfileBlock">
-        <h1 class="repoName">${data.name}</h1>
+        <h1 class="repoName"><a href="${data.html_url}">${data.name}</a></h1>
         <p>${data.bio}</p>
         <p>Followers: ${data.followers}</p>
         </div>
