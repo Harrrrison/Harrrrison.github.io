@@ -1,4 +1,4 @@
-const accessToken = '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';
+const accessToken = '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';
 const username = 'harrrrison';
 
 // Fetch GitHub profile data
